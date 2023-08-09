@@ -4,12 +4,12 @@ import gym_panda
 from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3 import PPO
 
-models_dir = "models/vanilla/ppo/0.25_sp_2225_0408_random-target"
+models_dir = "models/vanilla/ppo/0.25_co1_1845_0808_random-target"
 
 env = make_vec_env("panda-v0")
 
 dones = False
-model = PPO.load(models_dir+'/100000.zip')
+model = PPO.load(models_dir+'/10000.zip')
 
 obs = env.reset()
 while True:
